@@ -99,6 +99,15 @@ class Convert():
 			xeqn = sympy.simplify(((1-t)**3)*(start["x"]) + (3*(1-t)**2)*t*(c1["x"]) + 3*(1-t)*(t**2)*(c2["x"]) + (t**3)*end["x"])
 			yeqn = sympy.simplify(((1-t)**3)*(start["y"]) + (3*(1-t)**2)*t*(c1["y"]) + 3*(1-t)*(t**2)*(c2["y"]) + (t**3)*end["y"])
 
+		if typ == "QuadraticBezier":
+			c1 = {
+				"x": seg.control1.real,
+				"y": seg.control1.imag
+			}
+
+			xeqn = sympy.simplify(((1-t)**2)*(start["x"]) + (2*(1-t))*t*(c1["x"]) + (t**2)*end["x"])
+			yeqn = sympy.simplify(((1-t)**2)*(start["y"]) + (2*(1-t))*t*(c1["y"]) + (t**2)*end["y"])
+
 		elif typ == "Line":
 			xeqn = sympy.simplify((1-t)*start["x"] + t*end["x"])
 			yeqn = sympy.simplify((1-t)*start["y"] + t*end["y"])

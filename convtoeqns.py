@@ -51,7 +51,7 @@ class Convert():
 				prevSegment = False
 				self.polypaths = []
 				for segment in path:
-					if isinstance(segment, sp.path.CubicBezier) and prevInstance == ("CubicBezier"  or "QuadraticBezier") and segment.start == prevSegment.end:
+					if isinstance(segment, sp.path.CubicBezier) and prevInstance in ["CubicBezier", "QuadraticBezier"] and segment.start == prevSegment.end:
 						self.polypaths[-1].append(segment)
 					else:
 						self.polypaths.append([segment])

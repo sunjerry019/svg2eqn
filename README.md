@@ -1,4 +1,6 @@
 # svg2eqn
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+
 Python script that converts SVG paths to parametric equations
 
 ```python conv2eqn.py f [--usepoly]```

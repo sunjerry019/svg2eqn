@@ -8,6 +8,9 @@ Python script that converts SVG paths to parametric equations
 ```f``` is the filename <br />
 ```--usepoly``` uses polybeziers instead of cubicbeziers
 
+## Demo
+![Demo](https://github.com/sunjerry019/svg2eqn/raw/master/demo.jpg "A heart!")
+
 ## Dependencies
 This script relies on ```sympy```, ```svg.path```, and ```argparse```
 
